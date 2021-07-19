@@ -93,7 +93,7 @@ penguins %>%
 #above code gives "error: unexpected symbol in: "theme_minimal () + labs(title = 'Penguins "
 
 
-#Assignment #3; Prompt 2
+#Assignment 3; Prompt 2
 
 # Bar graph counts > colorblind palettes
 penguins %>%
@@ -116,7 +116,7 @@ penguins %>%
 summary(penguins)
 
 
-#Assingment #3; Prompt 3
+#Assingment 3; Prompt 3
 
 summary(penguins$bill_depth_mm)
 summary(penguins$bill_length_mm)
