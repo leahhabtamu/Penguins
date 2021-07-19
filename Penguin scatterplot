@@ -1,0 +1,38 @@
+#install packages
+install.packages("tidyverse")
+library(tidyverse)
+
+#install remotes
+install.packages("remotes")
+#install data
+remotes::install_github("allisonhorst/palmerpenguins")
+library(palmerpenguins)
+penguins
+
+#check if data imported
+library(palmerpenguins)
+penguins
+
+#looking at data using glimpse
+glimpse(penguins)
+
+# $ is way of telling R that something is a variable
+
+#exploring data
+unique(penguins$species)
+unique(penguins$island)
+
+#scatterplot data viz
+ggplot(data = penguins, 
+aes(x = bill_length_mm, y = bill_depth_mm)) +
+geom_point(aes(color = species, shape = species),
+size = 3, alpha = 0.8) + 
+#theme_minimal() +
+scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+labs(title = "Penguin bill size, Palmer Station LTER",
+subtitle = "Bill depth and bill length for Adelie, Chinstrap, and Gentoo Penguins",
+x = "Bill length (mm)",
+y = "Bill depth (mm)",
+color = "Penguin species",
+shape = "Penguin species") +
+theme_minimal()
