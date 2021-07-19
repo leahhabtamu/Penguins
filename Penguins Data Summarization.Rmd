@@ -109,7 +109,7 @@ penguins %>%
   ggplot () + geom_col(aes(x = species, y = n, fill = species)) +
   geom_label(aes(x = species, y = n, label = n)) +
   scale_fill_manual(values = c("#009E73", "#CC79A7", "gray")) +
-  labs(title = 'Penguin diversity in data')
+  labs(title = 'Number of Penguins Per Species')
   
   
 #data summarization
